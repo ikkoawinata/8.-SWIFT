@@ -1,3 +1,7 @@
+//BAHASA SWIFT INI SYNTAXNYA MIRIP DENGAN BAHASA PYTHON 
+
+
+
 func welcome() {
     print("=============================================================")
     print("               SELAMAT DATANG DI PROGRAM")
