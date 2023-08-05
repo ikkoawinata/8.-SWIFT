@@ -1,0 +1,29 @@
+func welcome() {
+    print("=============================================================")
+    print("               SELAMAT DATANG DI PROGRAM")
+    print("                MENGETAHUI TIPE DATA")
+    print("               B A H A S A    S W I F T")
+    print("=============================================================")
+}
+
+// Ini adalah fungsi void yang berisi tipe data
+func coba() {
+    let x = "Hello World"
+    let y: Character = "F"
+    let num = 12
+    let float = 12.67
+    let bool = true
+    let bool1 = false
+    let array = [3, 2, 4, 5]
+
+    // Ini fungsi untuk mencetak atau print
+    print("ini adalah tipe data String =",x)
+    print("ini adalah tipe data char =",y)
+    print("ini adalah tipe data integer =",num)
+    print("ini adalah tipe data Boolean (Benar/True) ="bool)
+    print("ini adalah tipe data Boolean (Salah/False) =",bool1)
+    print("ini adalah tipe data array =",array)
+}
+
+welcome()
+coba()
