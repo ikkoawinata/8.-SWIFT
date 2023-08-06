@@ -1,0 +1,27 @@
+import Foundation
+
+func welcome() {
+    print("===========================================================")
+    print("            P    R    O    G     R     A     M            ")
+    print("                 ENTERING LIKE PYTHON                    ")
+    print("                B A H A S A   J A V A                   ")
+    print("===========================================================")
+}
+
+func main() {
+    repeat {
+        welcome()
+        // Ini fungsi untuk enter dan membaca
+        print("Enter untuk lanjut: ", terminator: "")
+        if let input = readLine() {
+            print("i love you")
+        }
+
+        print("Apakah Anda ingin mencoba program lagi? [Y/N]: ", terminator: "")
+        if let tryAgain = readLine(), tryAgain.lowercased() == "n" {
+            break
+        }
+    } while true// disini while harus true bukan seperti j == 'Y' || j == 'y'
+}
+
+main()
