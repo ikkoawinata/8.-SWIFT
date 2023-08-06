@@ -1,0 +1,233 @@
+import Foundation
+
+func welcome() {
+    print("=====================================================")
+    print("              SELAMAT DATANG DI PROGRAM              ")
+    print("    T O K O  M I N U M A N  Y U N I K  I K K O       ")
+    print("                    BAHASA PHP")
+    print("=====================================================")
+}
+
+func tabel() {
+    print(" No. |\t    DAFTAR MINUMAN \t|  \t HARGA \t    |")
+    print("====================================================")
+    print(" 1.  | Jus Jeruk                | Rp.         20.000|")
+    print(" 2.  | Kopi Janji Jiwa          | Rp.         18.000|")
+    print(" 3.  | Mixue Lemon Tea          | Rp.         16.000|")
+    print(" 4.  | Es Campur Doger          | Rp.         15.000|")
+    print(" 5.  | Milk Shake               | Rp.         13.500|")
+    print(" 6.  | Lemon Tea                | Rp.         10.000|")
+    print(" 7.  | Capuccino Expresso       | Rp.         10.000|")
+    print(" 8.  | Ice Tea                  | Rp.          6.000|")
+    print(" 9.  | Air Mineral Unesa        | Rp.          3.500|")
+    print("0.   |                    TIDAK JADI                |")
+    print("======================================================")
+}
+
+welcome()
+tabel()
+
+var pilihan: Int = 0
+var hasil1: Int = 0
+var hasil2: Int = 0
+var hasil3: Int = 0
+var hasil4: Int = 0
+var hasil5: Int = 0
+var hasil6: Int = 0
+var hasil7: Int = 0
+var hasil8: Int = 0
+var hasil9: Int = 0
+var total: Int = 0
+var nama: String = ""
+var satu: String = ""
+var dua: String = ""
+var tiga: String = ""
+var empat: String = ""
+var lima: String = ""
+var enam: String = ""
+var tujuh: String = ""
+var delapan: String = ""
+var sembilan: String = ""
+var j: Character = " "
+var day: String = " "
+var customer: String = " "
+var antrian: String = ""
+var n: Int = 0
+
+print("SELAMAT DATANG DI RESTAURANT YUNIK")
+
+print("Tanggal pesanan [dd/mm/yyyy] : ")
+day = readLine() ?? ""
+
+print("Silahkan ketik nomor antrian [1-3 digit] : ")
+antrian = readLine() ?? ""
+
+print("Untuk nama pesanan atas nama siapa : ")
+customer = readLine() ?? ""
+
+repeat {
+    print("\nSilahkan kakak mau pesan apa [1/2/3/4/5/6/7/8/9/] : ")
+    if let pilihanStr = readLine(), let pilihanInt = Int(pilihanStr) {
+        pilihan = pilihanInt
+        switch pilihan {
+        case 1:
+            print(" 1.)----- Jus Jeruk ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Jus_Jeruk] : ")
+            if let satuStr = readLine() {
+                satu = satuStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil1 = n * 20000
+            print(" Total harganya untuk pesanan Jus Jeruk \(hasil1) ribu ")
+        case 2:
+            print(" 2.)----- Kopi Janji Jiwa ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Kopi_Janji_Jiwa] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil2 = n * 18000
+            print(" Total harganya untuk pesanan Jus Jeruk \(hasil2) ribu ")
+        case 3:
+            print(" 3.)----- Mixue Lemon Tea ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Mixue_Lemon_Tea] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil3 = n * 16000
+            print(" Total harganya untuk pesanan Jus Jeruk \(hasil3) ribu ")
+        case 4:
+            print(" 4.)------ Es Campur Doger  ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Es_Campur_Doger] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil4 = n * 15000
+            print(" Total harganya untuk pesanan Jus Jeruk \(hasil4) ribu ")
+        case 5:
+            print(" 5.)------ Milk Shake ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Milk_Shake] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil5 = n * 13500
+            print(" Total harganya untuk pesanan Milk Shake \(hasil5) ribu ")
+        case 6:
+            print(" 6.) ------ Lemon Tea ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Lemon_Tea] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil6 = n * 10000
+            print(" Total harganya untuk pesanan Lemon Tea \(hasil6) ribu ")
+        case 7:
+            print(" 7.)------ Cappucino Expresso ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Cappucino_Expresso] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil7 = n * 10000
+            print(" Total harganya untuk pesanan Cappucino Expresso \(hasil7) ribu ")
+        case 8:
+            print(" 8.)------ Ice Tea ------ ")
+            print("Ketik ulang nama minuman yang dipilih [Ice_Tea] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil8 = n * 8000
+            print(" Total harganya untuk pesanan Ice Tea \(hasil8) ribu ")
+        case 9:
+            print(" 9.)----- Air Mineral Unesa ------- ")
+            print("Ketik ulang nama minuman yang dipilih [Air_Mineral_Unesa] : ")
+            if let duaStr = readLine() {
+                dua = duaStr
+            }
+            print("mau pesan berapa ? : ")
+            if let nStr = readLine(), let nInt = Int(nStr) {
+                n = nInt
+            }
+            hasil9 = n * 3500
+            print(" Total harganya untuk pesanan Air Mineral Unesa \(hasil9) ribu ")
+        default:
+            print("Pilihan tidak sesuai dengan tabel")
+            break
+        }
+        
+        total = hasil1 + hasil2 + hasil3 + hasil4 + hasil5 + hasil6 + hasil7 + hasil8 + hasil9
+        print("\nAda pesanan lain [Y/N] : ")
+        if let jStr = readLine() {
+            j = jStr.uppercased().first ?? " "
+        }
+        
+        print("\nTotal keseluruhan pesanan anda adalah = \(total) ribu")
+        
+    } else {
+        print("Input tidak valid. Masukkan angka.")
+    }
+} while j == "Y"
+
+print("=================================================================================================")
+print("|                                                                                            |")
+print("|                       R E S T A U R A N T   M I N U M A N   Y U N I K                      |")
+print("|                                   Jalan Sampoerna No. 12 B                                 |")
+print("|                                  Kecamatan Pabean Cantikan                                 |")
+print("|                                      ' 081233075270 '                                      |")
+print("|                                                                                            |")
+print("|================================================================================================|")
+print("|                                                                                            |")
+print("|                                               \t     \(day)                       |")
+print("|                                                                                            |")
+print("|      Author   : 'IKKO AWINATA'                                                             |")
+print("|      Customer : \(customer) \t\t\t\t\t\t\t\t |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                          P  E  S  A  N  A  N      N  O  M  O  R                            |")
+print("|                   ____________________________________________________                     |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                            \(antrian)       \t\t\t\t                |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("|                 SILAHKAN DIAMBIL PESANANNYA SESUAI DENGAN NOMOR ANTRIAN                    |")
+print("|                                                                                            |")
+print("|                                                                                            |")
+print("===============================================================================================|")
+print("|                                                                                            |")
+print(" Pesanan atas nama '\(customer)' silahkan diambil pesanannya")
