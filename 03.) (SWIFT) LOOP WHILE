@@ -1,0 +1,16 @@
+func welcome() {
+    print("====================================================================")
+    print("                      P  R  O  G  R  A  M")
+    print("                 P E R U L A N G A N   W H I L E")
+    print("                           BAHASA SWIFT")
+    print("====================================================================")
+}
+
+welcome()
+//harus menggunakan VAR pada penamaan fungsi variabel pada bahasa pemograman swift 
+var n = 1
+
+while n <= 5 {
+    print("\(n) I WANNA BE YOURS")
+    n += 1
+}
