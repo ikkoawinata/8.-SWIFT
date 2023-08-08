@@ -1,0 +1,46 @@
+import Foundation
+
+
+func welcome(){
+    print("==================================================")
+    print("          SELAMAT DATANGDI PROGRAM")
+    print("MEMBANDINGKAN NILAI INTEGER DAN MENGELUARKAN NOTE")
+    print("               BAHASA SWIFT")
+    print("==================================================")
+}
+
+
+func main(){
+    var a = Float(0)
+    var b = Float(0)
+    var j  = " "
+
+
+
+repeat {
+    //Let input =readLine()!.uppercased()
+    print("masukkan nilai integer a = ")
+    a = Float(readLine()!) ?? 0
+    print("masukkan nilai integer b =")
+    b = Float(readLine()!) ?? 0
+
+    if (a > b) {
+        print(" nilai A lebih besar dari nilai B")
+    }else if ( a < b) {
+        print("Nilai A lebih kecil dari nilai B")
+    } else if ( a == b) {
+        print("nilai A dan B sama besar")
+
+}
+    print("apakah anda ingin mencoba programlagi ? [Y/N] : ")
+    let continueInput = readLine()?.uppercased()
+    if continueInput != "Y"{
+    break
+    }
+}while true
+print("Terima kasih telah menggunakan program ini")
+print("Made by ikkoc_awinata")
+} 
+
+welcome()
+main()
