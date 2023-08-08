@@ -1,0 +1,447 @@
+import Foundation
+
+func welcome() {
+    print("======================================================================")
+    print("   S E L A M A T   D A T A N G   D I   P R O G R A M ")
+    print("  KUMPULAN RUMUS LUAS PERMUKAAN BANGUNAN DAN VOLUME")
+    print("                         BAHASA SWIFT")
+    print("======================================================================")
+}
+
+func tabel() {
+    print("================================================================================")
+    print("A. R U M U S  K E L I L I N G  &  L U A S  B A N G U N  D A T A R\t\t")
+    print("================================================================================")
+    print("1. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 22/7)\t|")
+    print("2. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 22/7)\t|")
+    print("3. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 3,14)\t|")
+    print("4. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 3,14)\t|")
+    print("5. | Menghitung Panjang Busur pada Lingkaran\t\t\t|")
+    print("6. | Menghitung Keliling Persegi\t\t\t\t|")
+    print("7. | Menghitung Luas Persegi\t\t\t\t|")
+    print("8. | Menghitung Keliling Persegi Panjang\t\t\t|")
+    print("9. | Menghitung Luas Persegi Panjang\t\t\t\t|")
+    print("10.| Menghitung Keliling Jajar Genjang\t\t\t|")
+    print("11.| Menghitung Luas Jajar Genjang\t\t\t\t|")
+    print("12.| Menghitung Keliling Segitiga\t\t\t\t|")
+    print("13.| Menghitung Luas Segitiga\t\t\t\t|")
+    print("14.| Menghitung Luas Belah Ketupat\t\t\t\t|")
+    print("15.| Menghitung Luas Trapesium\t\t\t\t|")
+    print("==============================================================================")
+    print("B. R U M U S  L U A S  P E R M U K A A N  &  V O L U M E  B A N G U N  R U A N G")
+    print("==============================================================================")
+    print("16.| Menghitung Luas Kubus\t\t\t\t\t|")
+    print("17.| Menghitung Volume Kubus\t\t\t\t\t|")
+    print("18.| Menghitung Luas Balok\t\t\t\t\t|")
+    print("19.| Menghitung Volume Balok\t\t\t\t\t|")
+    print("20.| Menghitung Luas Permukaan Limas Segiempat\t\t\t|")
+    print("21.| Menghitung Volume Limas Segiempat\t\t\t\t|")
+    print("22.| Menghitung Volume Prisma Segitiga\t\t\t\t|")
+    print("23.| Menghitung Luas Prisma Segitiga\t\t\t\t|")
+    print("24.| Menghitung Volume Limas Segitiga\t\t\t\t|")
+    print("25.| Menghitung Luas Selimut Tabung (Jari-Jari)\t\t\t|")
+    print("26.| Menghitung Luas Selimut Tabung (Diameter)\t\t\t|")
+    print("27.| Menghitung Luas Permukaan Tabung (Jari-Jari)\t\t\t|")
+    print("28.| Menghitung Volume Tabung (Jari-Jari)\t\t\t\t|")
+    print("29.| Menghitung Luas Selimut Kerucut\t\t\t\t|")
+    print("30.| Menghitung Luas Permukaan Kerucut\t\t\t\t|")
+    print("31.| Menghitung Volume Kerucut\t\t\t\t\t|")
+    print("32.| Menghitung Luas Bola\t\t\t\t\t|")
+    print("33.| Menghitung Volume Bola\t\t\t\t\t|")
+    print("==============================================================================")
+}
+
+func main() {
+    var pytagoras = Float(0)
+    var j = ""
+    var r = Float(0)
+    var d = Float(0)
+    var t = Float(0)
+    var T = Float(0)
+    var rumusa = Float(0)
+    var rumusb = Float(0)
+    var pilihan = 0
+    var keliling = Float(0)
+    var busur = Float(0)
+    var luas = Float(0)
+    var sisi = Float(0)
+    var a = Float(0)
+    var b = Float(0)
+    var c = Float(0)
+    
+    welcome()
+    
+    repeat {
+        print("Pilihan metode perhitungan rumus:\n( Ketik 'T' untuk melihat tabel )")
+        let input = readLine()!.uppercased()
+        
+        if input == "T" {
+            tabel()
+            print("Pilih rumus yang akan dihitung (masukkan nomor): ")
+            pilihan = Int(readLine()!) ?? 0
+        } else {
+            pilihan = Int(input) ?? 0
+        }
+        
+        switch pilihan {
+        case 1:
+            print(">> Menghitung Keliling Lingkaran (JARI-JARI) <<")
+            print("Masukkan panjang jari-jari lingkaran: ")
+            r = Float(readLine()!) ?? 0
+            keliling = 2 * 22 / 7 * r
+            print("Keliling Lingkaran dengan jari-jari \(r) adalah \(keliling)")
+        case 2:
+            print(">> Menghitung Keliling Lingkaran (DIAMETER) <<")
+            print("Masukkan panjang diameter lingkaran: ")
+            d = Float(readLine()!) ?? 0
+            keliling = 22 / 7 * d
+            print("Keliling Lingkaran dengan diameter \(d) adalah \(keliling)")
+        case 3:
+            print(">> Menghitung Keliling Lingkaran (JARI-JARI) <<")
+            print("Masukkan panjang jari-jari lingkaran: ")
+            r = Float(readLine()!) ?? 0
+            keliling = 2 * 3.14 * r
+            print("Keliling Lingkaran dengan jari-jari \(r) adalah \(keliling)")
+        case 4:
+            print(">> Menghitung Keliling Lingkaran (DIAMETER) <<")
+            print("Masukkan panjang diameter lingkaran: ")
+            d = Float(readLine()!) ?? 0
+            keliling = 3.14 * d
+            print("Keliling Lingkaran dengan diameter \(d) adalah \(keliling)")
+        case 5:
+            print(">> Menghitung Panjang Busur pada Lingkaran <<")
+            print("Masukkan panjang jari-jari lingkaran: ")
+            r = Float(readLine()!) ?? 0
+            print("Masukkan besar sudut pusat lingkaran (dalam derajat): ")
+            pytagoras = Float(readLine()!) ?? 0
+            busur = (pytagoras / 360) * (2 * 22 / 7 * r)
+            print("Panjang Busur pada lingkaran dengan jari-jari \(r) dan sudut \(pytagoras) derajat adalah \(busur)")
+        case 6:
+            print(">> Menghitung Keliling Persegi <<")
+            print("Masukkan panjang sisi persegi: ")
+            sisi = Float(readLine()!) ?? 0
+            keliling = 4 * sisi
+            print("Keliling Persegi dengan sisi \(sisi) adalah \(keliling)")
+        case 7:
+            print(">> Menghitung Luas Persegi <<")
+            print("Masukkan panjang sisi persegi: ")
+            sisi = Float(readLine()!) ?? 0
+            luas = sisi * sisi
+            print("Luas Persegi dengan sisi \(sisi) adalah \(luas)")
+        case 8:
+            print(">> Menghitung Keliling Persegi Panjang <<")
+            print("Masukkan panjang sisi panjang: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi lebar: ")
+            b = Float(readLine()!) ?? 0
+            keliling = 2 * (a + b)
+            print("Keliling Persegi Panjang dengan panjang \(a) dan lebar \(b) adalah \(keliling)")
+        case 9:
+            print(">> Menghitung Luas Persegi Panjang <<")
+            print("Masukkan panjang sisi panjang: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi lebar: ")
+            b = Float(readLine()!) ?? 0
+            luas = a * b
+            print("Luas Persegi Panjang dengan panjang \(a) dan lebar \(b) adalah \(luas)")
+        case 10:
+            print(">> Menghitung Keliling Jajar Genjang <<")
+            print("Masukkan panjang sisi a: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi b: ")
+            b = Float(readLine()!) ?? 0
+            keliling = 2 * (a + b)
+            print("Keliling Jajar Genjang dengan sisi a \(a) dan sisi b \(b) adalah \(keliling)")
+        case 11:
+            print(">> Menghitung Luas Jajar Genjang <<")
+            print("Masukkan panjang alas (a): ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan tinggi (t): ")
+            t = Float(readLine()!) ?? 0
+            luas = a * t
+            print("Luas Jajar Genjang dengan panjang alas \(a) dan tinggi \(t) adalah \(luas)")
+        case 12:
+            print(">> Menghitung Keliling Segitiga <<")
+            print("Masukkan panjang sisi a: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi b: ")
+            b = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi c: ")
+            c = Float(readLine()!) ?? 0
+            keliling = a + b + c
+            print("Keliling Segitiga dengan sisi a \(a), sisi b \(b), dan sisi c \(c) adalah \(keliling)")
+        case 13:
+            print(">> Menghitung Luas Segitiga <<")
+            print("Masukkan panjang alas (a): ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan tinggi (t): ")
+            t = Float(readLine()!) ?? 0
+            luas = 0.5 * a * t
+            print("Luas Segitiga dengan panjang alas \(a) dan tinggi \(t) adalah \(luas)")
+        case 14:
+            print(">> Menghitung Luas Belah Ketupat <<")
+            print("Masukkan panjang diagonal 1: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang diagonal 2:")
+            a = Float(readLine()!) ?? 0
+            luas = 0.5 * a * b
+            print("Luas Belah Ketupat dengan panjang diagonal 1 \(a) dan diagonal 2 \(b) adalah \(luas)")
+        case 15:
+            print(">> Menghitung Keliling Trapesium <<")
+            print("Masukkan panjang sisi AB: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi BC: ")
+            b = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi CD: ")
+            c = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi DA: ")
+            d = Float(readLine()!) ?? 0
+            keliling = a + b + c + d
+            print("Keliling Trapesium dengan sisi AB \(a), sisi BC \(b), sisi CD \(c), dan sisi DA \(d) adalah \(keliling)")
+        case 16:
+            print(">> Menghitung Luas Trapesium <<")
+            print("Masukkan panjang sisi AB: ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi BC: ")
+            b = Float(readLine()!) ?? 0
+            print("Masukkan panjang sisi CD: ")
+            c = Float(readLine()!) ?? 0
+            print("Masukkan tinggi trapesium: ")
+            t = Float(readLine()!) ?? 0
+            luas = 0.5 * t * (a + b) // 2
+            print("Luas Trapesium dengan sisi AB \(a), sisi BC \(b), sisi CD \(c), dan tinggi \(t) adalah \(luas)")
+
+
+            case 17:
+            print(">>MENGHITUNG VOLUME KUBUS")
+            print("Masukkan Rusuk Kubus : ")
+            r = Float(readLine()!) ?? 0
+            keliling = pow(r,3)
+            print("Volume Kubus dengan rusuk \(r) adalah \(keliling)")// (\(variabel) -> artinya seperti cin pada c++)
+
+
+            case 18:
+            print(">>MENGHITUNG LUAS BALOK<<")
+            print("masukkan panjang : ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan lebar : ")
+            b = Float(readLine()!) ?? 0
+            print("Masukkan tinggi trapesium :")
+            c = Float(readLine()!) ?? 0
+            keliling = 2 * (a * b) + 2 * (a * c) + 2 * (b * c)
+            print("Rumus luas balok yaitu : Luas = 2*(Panjang * lebar) + 2*(Panjang * tinggi) + 2*(lebar*tinggi) = 2 * (\(a) + \(b)) + 2 * (\(a) + \(c)) + 2 * (\(b) + \(c)) = \(keliling)")
+            print (" hasilnya adalah = \(keliling)")
+
+
+            case 19:
+            print(">>MENGHITUNG VOLUME BALOK<<")
+            print("masukkan panjang : ")
+            a = Float(readLine()!) ?? 0
+            print("masukkan luas alas : ")
+            b = Float(readLine()!) ?? 0
+            print("masukkan tinggi trapesium : ")
+            c = Float(readLine()!) ?? 0
+            keliling = a * b * c
+            print("Rumusnya yaitu : Volume = Panjang * Luas Alas * Tinggi = \(a) * \(b) * \(c) = \(keliling)")
+            print("hasilnya adalah = \(keliling)")
+
+            case 20 :
+            print(">> MENGHITUNG LUAS PERMUKAAN LIMAS SEGIEMPAT<<")
+            print("masukkan sisi alasnya : ")
+            a = Float(readLine()!) ?? 0
+            print("masukkan tinggi alasnya : ")
+            b = Float(readLine()!) ?? 0
+            keliling = pow(a,2)
+            T/*LuasSegitiga*/ = 1.0/2.0 * a * b
+            rumusa /*LuasLImas*/ = (4 * T) + keliling
+            print("Rumusnya yaitu =  Luas = (4 * Luas Segitiga) + Luas Alas = (4 * \(T)) + \(keliling) = \(rumusa)")
+            print("Hasilnya adalah = \(rumusa)")
+
+
+            case 21:
+            print("<<MENGHITUNG VOLUME LIMAS SEGIEMPAT<<")
+            print("Masukkan luas alas : ")
+            a/*alas*/ = Float(readLine()!) ?? 0
+            print("Masukkan tinggi limas : ")
+            b/*tinggi*/ = Float(readLine()!) ?? 0
+            keliling/*L_alas*/  = pow(a,a)
+            rumusa = 1.0/3.0 * a * b
+            print("Rumusnya yaitu : Volume = 1/3 * Luas alas * Tinggi = 1/3 * \(a) * \(b) = \(rumusa)") 
+            print("hasilnya adalah = \(rumusa)")
+
+
+            case 22:
+            print(">> MENGHITUNG VOLUME PRISMA SEGITIGA <<")
+            print(" Masukkan alas : ")
+            a = Float(readLine()!) ?? 0
+            print("Masukkan tinggi limas : ")
+            b = Float(readLine()!) ?? 0
+            print("Masukkan tinggi T  : ")
+            c = Float (readLine()!) ?? 0
+            luas /*luaslas*/ = 1.0 / 2.0 * a * b
+            rumusa = luas * c
+            print("Rumusnya yaitu : Volume = 1/2 * alas * tinggi * Tinggi = 1/2 * (\(a) * \(b) * \(c) = \(rumusa))")
+            print("Hasilnya adalah = \(rumusa)")
+
+            case 23:
+            print(">> MENGHITUNG LUAS PERMUKAAN PRISMA SEGITIGA <<")
+            print(" Rumus Luas Permukaan Prisma Segitiga = Luas Selimut + Luas Alas ")
+            print(" Masukkan sisi : ")
+            a/*sisi*/= Float(readLine()!) ?? 0
+            print("Masukkan lebar : ")
+            b /*lebar*/=  Float(readLine()!) ?? 0
+            print("Masukkan lebar prisma : ")
+            c/*lebar prisma*/ = Float (readLine()!) ?? 0
+            keliling /*sisiSegitiga*/ = pow(b,2) - pow(c,2)
+            print("Hasil sisi segitiga yang hasilnya berbentuk akar : \(keliling)")
+            t/*sqrt*/ = sqrt(keliling)
+            print("akar dari \(keliling) yaitu \(t)")
+            luas /*luasSelimut*/ = (a * b) + (a * c) + (a * t)
+            print("")
+            print("Luas Selimut = (Panjang * lebar) + ( panjang * tinggi) + (panjang * tinggi (hasil akar) = \(luas)")
+            d = 2 * (1.0 / 2.0 * t * c)
+            rumusa = luas + d
+            print("hasil dari menghitung luas permukaan prisam segitiga adalah = \(rumusa)")
+      
+
+        case 24:
+        print(">> MENGHITUNG VOLUME LIMAS SEGITIGA <<")
+        print(" masukkan alas lmas segitia : ")
+        a/*alas*/ = Float(readLine()!) ?? 0
+        print("masukkan tinggi limas segitiga : ")
+        b/*tinggi*/ = Float(readLine()!) ?? 0
+        print("Masukkan tinggi alas limas :")
+       c /*alas*/ = Float(readLine()!) ?? 0
+       rumusa = 1.0 / 3.0 * a * b * c
+       print("hasilnya adalah = 1/3 * alas limas * Tinggi limas * tinggi alas = 1/3 * \(a) * \(b) * \(c) = \(rumusa)")
+
+       case 25 :
+       print(">> MENGHITUNG LUAS SELIMUT TABUNG (JARI-JARI)<<")
+       print("masukkan jari-jari tabung : ")
+    a = Float(readLine()!) ?? 0
+    print("Masukkan tinggi tabun : ")
+    b = Float(readLine()!) ?? 0
+   rumusa = 2 * 22.0 / 7.0 * a * b
+     rumusb = 2 * 3.14 * a * b
+     print("Hasil luas selimut (phi:22/7) =  2 * 22/7 * r * tinggi = 2 * 22/7 * \(a) * \(b) = \(rumusa) ")
+          print("Hasil luas selimut (phi:3.14) =  2 * 3.14 * r * tinggi = 2 * 3.14 * \(a) * \(b) = \(rumusb) ")
+
+
+
+        case 26:
+        print(">> MENGHITUNG LUAS SLEIMUT TABUNG (DIAMETER) << ")
+        print("masukkan diameter tabung : ")
+        a = Float(readLine()!) ?? 0
+        print("masukkan tinggi tabung : ")
+        b = Float(readLine()!) ?? 0
+        rumusa = 22.0 / 7.0 * a * b
+        rumusb = 3.14 * a * b
+        print(" hasil luas selimut (phi=22/7) :22/7 * d * tinggi =  22/7 * \(a) * \(b) = \(rumusa)")
+        print(" hasil luas selimut (phi=3.14) :3.14 * d * tinggi =  3.14 * \(a) * \(b) = \(rumusb)")
+
+
+        case 27:
+        print(">> MENGHITUNG LUAS PERMUKAAN TABUNG (JARI-JARI <<)")
+        print("masukkan jari-jari tabung : ")
+        a = Float(readLine()!) ?? 0
+        print("masukkan tinggi tabung : ")
+        b = Float(readLine()!) ?? 0
+        rumusa = 2 * 22 / 7 * a * (a + b)
+        rumusb = 2 * 3.14 * a * (a + b)
+        print(" hasil luas selimut (phi=22/7) : 2 * 22/7 * r * (r + t) = 2 * 22/7 * \(a) * (\(a) + \(b) = \(rumusa)")
+        print(" hasil luas selimut (phi=22/7) : 2 * 3.14 * r * (r + t) = 2 * 3.14 * \(a) * (\(a) + \(b) = \(rumusb)")
+
+
+        case 28 : 
+        print(">> MENGHITUNG VOLUME TABUNG (JARI-JARI) <<")
+        print("masukkan tinggi tabung : ")
+        a = Float(readLine()!) ?? 0
+        print("masukkan tinggi tabung : ")
+        b = Float(readLine()!) ?? 0
+        rumusa = 22.0 / 7.0 * pow(a, 2) * b
+        rumusb = 3.14 * pow(a, 2) * b
+        print("Rumus A (phi:22/7) =  Volume = Phi * (r pangkat 2 * tinggi ) = 22/7 * \(pow(a,2)) * \(b) = \(rumusa)")
+        print("Rumus B (phi:3.14) =  Volume = Phi * (r pangkat 2 * tinggi ) = 3.14 * \(pow(a,2)) * \(b) = \(rumusb)")
+
+
+        case 29:
+        print(">> MENGHITUNG LUAS SELIMUT KERUCUT <<")
+        print("masukkan jari-jari kerucut : ")
+        a = Float(readLine()!) ?? 0
+        print("masukkan sisi kerucut : ")
+        b = Float(readLine()!) ?? 0
+        c /*pytagoras*/ = pow(a,2) + pow(b,2)
+        print("Hasil sisi segitiga yang hasulnya berbentuk akar = \(c)")
+        d = sqrt(c)
+        print("akar dari \(c) adalah = \(j)")
+        rumusa = 22.0 / 7.0 * a * d
+        rumusb = 3.14 * a * d
+        print("rumus A (phi:22/7) yaitu = Luas = phi * r * sisi =  22/7 * \(a) * \(j) = \(rumusa)")
+        print("rumus B (phi:3.14) yaitu = Luas = phi * r * sisi =  3.14 * \(a) * \(j) = \(rumusb)")
+
+
+
+        case 30:
+        print(">> MENGHITUNG LUAS PERMUKAAN KERUCUT << ")
+        print("masukkan jari-jari kerucut : ")
+        a = Float(readLine()!) ?? 0
+        print("masukkan sisi kerucut : ")
+        b = Float(readLine()!) ?? 0
+        rumusa = (22.0 / 7.0 * a * (a + b))
+        rumusb = (3.14 * a * (a + b))
+        print("Hasil luas selimut (phi=22/7) : Luas =  (22/7 * r * (r + sisi)) = 22/7 * \(a) * \(b) = \(rumusa)")
+        print("Hasil luas selimut (phi=3.14) : Luas =  (3.14 * r * (r + sisi)) = 3.14 * \(a) * \(b) = \(rumusb)")
+        
+
+
+        case 31:
+        print(">> MENGHITUNG VOLUME KERUCUT <<")
+        print("masukkan jari-jari kerucut : ")
+        a = Float(readLine()!) ?? 0
+        print("masukkan sisi kerucut : ")
+        b = Float(readLine()!) ?? 0
+        rumusa = 1.0 / 3.0 * 22.0 / 7.0 * pow(a,2) * b
+        rumusb = 1.0 / 3.0 * 3.14 * pow(a,2) * b
+        print(" 1.0/3.0 * 22.0/7.0 * (r pangkat 2) * tinggi = 1.0/3.0 * 22.0/7.0 * \(pow(a,2)) * \(b) = \(rumusa)")
+        print(" 1.0/3.0 * 3.14* (r pangkat 2) * tinggi = 1.0/3.0 * 3.14 * \(pow(a,2)) * \(b) = \(rumusb)")
+
+
+        case 32:
+        print(">> MENGHITUNG LUAS PERMUKAAN BOLA <<")
+        print("masukkan jari - jari = ")
+        r = Float(readLine()!) ?? 0
+        rumusa = 4.0 / 3.0 * 22.0 / 7.0 * pow(r,2)
+        rumusb = 4.0 / 3.0 * 3.14 * pow(r,2)
+        print("hasil (phi:22/7) = 4/3 * 22/7 * r^3 = 4/3 * 22/7 (\(pow(r,2)) = \(rumusa)) ")
+        print("hasil (phi:3.14) = 4/3 * 3.14 * r^3 = 4/3 * 3.14 (\(pow(r,2)) = \(rumusb)) ")
+
+
+        case 33:
+        print( " >> MENGHITUNG VOLUME BOLA << ")
+        print( " masukkan jari-jari bola : ")
+        r = Float(readLine()!) ?? 0
+        rumusa = 4.0 / 3.0 * 22.0 / 7.0 * pow(r,3)
+        rumusb = 4.0 / 3.0 * 3.14 * pow(r,3)
+        print("hasil (phi:22/7) = 4/3 * 22/7 * r^3 = 4/3 * 22/7 (\(pow(r,3)) = \(rumusa)) ")
+        print("hasil (phi:3.14) = 4/3 * 3.14 * r^3 = 4/3 * 3.14 (\(pow(r,3)) = \(rumusb)) ")
+
+
+        default:
+            print("Pilihan tidak valid.")
+        }
+        
+
+        //ini untuk seperti do-while -> repeat while
+        print("\nApakah Anda ingin menghitung lagi? (Y/N): ")
+        let continueInput = readLine()?.uppercased()
+        if continueInput != "Y"{
+            break
+        }
+    } while true
+    print (" Terima kasih telah menggunakan program ini")
+    print(("Made by Ikkoc_awinata"))
+}
+
+// Memanggil fungsi utama untuk menjalankan program
+main()
+
