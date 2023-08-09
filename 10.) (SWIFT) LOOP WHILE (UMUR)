@@ -1,0 +1,54 @@
+import Foundation
+
+func welcome() {
+    print("========================================================")
+    print("              SELAMAT DATANG DI PROGRAM ")
+    print("     PERULANGAN WHILE DAN PERCABANGAN IF ELSE (UMUR)")
+    print("                       BAHASA SWIFT")
+    print("===========================================================")
+}
+
+func main() {
+    var umur: Float = 0
+    var j = ""
+
+    repeat {
+        print("masukkan umur anda sekarang : ")
+        if let umurValue = Float(readLine() ?? "") {
+            umur = umurValue
+        }
+        
+        while umur <= 12 {
+            print("\n Saya tidak yakin umur anda \(umur)")
+            print("\n Silakan diulangi lagi......")
+
+            print("masukkan umur anda sekarang : ")
+            if let umurValue = Float(readLine() ?? "") {
+                umur = umurValue
+            }
+        }
+        
+        if umur >= 12 && umur <= 21 {
+            print("\n wahh anda baru saja beranjak dewasa")
+            print("\n gunakan waktu sebaik-baiknya")
+        } else if umur >= 22 && umur <= 100 {
+            print("\n anda sudah beranjak tua")
+            print("\n jadilah seseorang yang dewasa dan jangan lupa perbaiki ibadahmu")
+        } else if umur >= 110 {
+            print("\n WAAHH ANDA SANGAT WAAHH SEKALI")
+        }
+        
+        print("\n ingin mencoba program lagi ? [Y/N] : ", terminator: "")
+        j = readLine() ?? ""
+    } while j.lowercased() == "y"
+    
+    print("\n Terima kasih telah menggunakan program ini")
+    print("\n Made by Ikkoc_awinata")
+}
+
+func readLine() -> String? {
+    return readLine(strippingNewline: true)
+}
+
+welcome()
+main()
