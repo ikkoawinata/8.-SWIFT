@@ -1,0 +1,49 @@
+func welcome(){
+    print("========================================================")
+    print("              SELAMAT DATANG DI PROGRAM")
+    print("               MENCARI NILAI TERBESAR")
+    print("                    BAHASA SWIFT")
+    print("========================================================")
+}
+
+
+func main(){
+    var a = Float(0)
+    var b = Float(0)
+    var c = Float(0)
+    var maks = Float(0)
+    var j = " "
+
+
+repeat{
+    print("masukkan nilai ke-1 : ")
+    a = Float(readLine()!) ?? 0
+    print("masukkan nilai ke-2 : ")
+    b = Float(readLine()!) ?? 0
+    print("masukkan nilai ke -3 : ")
+    c = Float(readLine()!) ?? 0
+
+
+    if ( a > b ){
+        maks = a
+    } else {
+        maks = b
+    }
+    // PADA PROGRAM SWIFT PERCABANGAN PADA IF INI, HARUS DILAKUKAN SPASII
+     if ( c > maks ){
+        maks = c
+    }
+
+    print(" jadi nilai terbesarnya adalah =  \(maks)")
+    print("ingin mencoba program lagi ? [Y/N] : ")
+    let continueInput = readLine()?.uppercased()
+    if continueInput != "Y"{
+        break
+    }
+}while true
+print("Terima kasih telah menggunakan program ini")
+print("Made by Ikkoc_awinata")
+}
+
+welcome()
+main()
