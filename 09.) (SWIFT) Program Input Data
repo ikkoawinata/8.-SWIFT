@@ -1,0 +1,54 @@
+import Foundation
+
+func welcome() {
+    print("=============================================================")
+    print(" S E L A M A T   D A T A N G   D I   P R O G R A M")
+    print(" INPUT DATA DAN MENENTUKAN NILAI TERBESAR DAN TERKECIL")
+    print("                    BAHASA SWIFT")
+    print("==============================================================")
+}
+
+func main() {
+    var n = 0, terkecil = 0, terbesar = 0, bil = 0, j = ""
+
+    repeat {
+        print( " Masukkan banyaknya data yg diinput : ")
+        if let nValue = Int(readLine() ?? "") {
+            n = nValue
+        }
+        print(" ")
+
+        for i in 1...n {
+            print("Masukkan bilangan ke-  ")
+            if let bilValue = Int(readLine() ?? "") {
+                bil = bilValue
+            }
+
+            if i == 1 {
+                terkecil = bil
+                terbesar = bil
+            } else if bil < terkecil {
+                terkecil = bil
+            } else if bil > terbesar {
+                terbesar = bil
+            }
+        }
+
+        print("\n Nilai terkecilnya adalah = \(terkecil)")
+        print("\n Nilai terbesar  adalah = \(terbesar)")
+        print("\n")
+        print("\nIngin mencoba program lagi ? [Y/N] :", terminator: "")
+        j = readLine() ?? ""
+    } while j.lowercased() == "y"
+    
+    print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("\n Terima kasih telah menggunakan program ini")
+    print("\n Made by ikkoc_awinata")
+}
+
+func readLine() -> String? {
+    return readLine(strippingNewline: true)
+}
+
+welcome()
+main()
