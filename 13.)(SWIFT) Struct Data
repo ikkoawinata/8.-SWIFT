@@ -1,0 +1,25 @@
+func welcome(){
+    print("===================================================================")
+    print("          S E L A M A T  D A T A N G  D I  PR O G R A M ")
+    print("                      D A T A  S T R U C T")
+    print("                         BAHASA SWIFT")
+    print("===================================================================")
+}
+
+
+func main(){
+    struct DataPribadi{
+        var nama  = "Ikko Cahya Awinata"
+        var nim    = "22051204038"
+        var JenisKelamin = "perempuan"
+        var alamat = "jalan sampoerna, Surabaya"
+    }
+
+    let m = DataPribadi()
+    print(" Nama          = \(m.nama)")
+    print(" NIM           = \(m.nim)")
+    print(" Jenis Kelamin = \(m.JenisKelamin)")
+    print(" Jenis Kelamin = \(m.alamat)")
+}
+
+main()
