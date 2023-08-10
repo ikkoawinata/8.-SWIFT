@@ -1,0 +1,61 @@
+func welcome(){
+    print( "======================================================")
+    print("   S E L A M A T   D A T A N G   D I  P R O G R A M ")
+    print("           LULUS IPK (PERCABANGAN IF ELSE)")
+    print("                   BAHASA SWIFT")
+    print( "======================================================")
+}
+
+
+func main(){
+    var mhs = " "
+    var fak = " "
+    var jur = " "
+    var prodi = " "
+    var ipk: Float = 0
+    var angkatan = " "
+    var j = " "
+
+
+
+repeat{
+//CONTOH FUNGSI DATA STRING UNTUK MASUKKAN DARI USER
+    print("Masukkan nama mahasiswa/i [contoh:Nama_nama_nama] ")
+    mhs = readLine() ?? " "
+
+    print("Angkatan : ")
+    angkatan = readLine() ?? " "
+
+    print("Fakultas [contoh:Fakultas_teknik] : ")
+    fak = readLine() ?? " "
+
+     print("Jurusan [contoh:nama_jurusan] : ")
+     jur = readLine() ?? " "
+
+     print(" Program Studi [contoh:nama_prodi]:")
+     prodi = readLine() ?? " "
+
+     print(" Masukkan IPK Terakhir Mahasiswa/i : ")
+     ipk = Float(readLine()!) ?? 0
+//CONTOH FUNGSI DATA STRING UNTUK MASUKKAN DARI USER
+
+if (ipk >= 4.00){
+    print("saudara \(mhs) dari angkatan \(angkatan) dari fakultas \(fak) dengan jurusan \(jur) dengan progranm studi \(prodi) lulus dengan IPK sempurna \(ipk)")
+}else if ( ipk >= 3.49 ){
+     print("saudara \(mhs) dari angkatan \(angkatan) dari fakultas \(fak) dengan jurusan \(jur) dengan progranm studi \(prodi) lulus dengan IPK sangat baik \(ipk)")
+}else if ( ipk >= 2.49){
+     print("saudara \(mhs) dari angkatan \(angkatan) dari fakultas \(fak) dengan jurusan \(jur) dengan progranm studi \(prodi) lulus dengan IPK \(ipk)")
+
+}else if ( ipk >= 1.49){
+     print("saudara \(mhs) dari angkatan \(angkatan) dari fakultas \(fak) dengan jurusan \(jur) dengan progranm studi \(prodi) dinyatakan d=mengulang dengan IPK \(ipk)")
+}
+print("\n")
+print("ingin coba program lagi ? [Y/N] : ")
+}while j.lowercased() == "y"
+print("=========================================================")
+print("terima kasih telah menggunakan program ini")
+print("made by ikkoc_awinata")
+}
+
+welcome()
+main()
