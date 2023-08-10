@@ -51,6 +51,7 @@ if (ipk >= 4.00){
 }
 print("\n")
 print("ingin coba program lagi ? [Y/N] : ")
+j = readLine() ?? " "
 }while j.lowercased() == "y"
 print("=========================================================")
 print("terima kasih telah menggunakan program ini")
