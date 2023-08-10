@@ -1,0 +1,188 @@
+func welcome(){
+    print("=============================================================")
+    print("                  SELAMAT DATANG DI PROGRAM")
+    print("                   KALKULATOR SUHU")
+    print("                       BAHASA SWIFT")
+    print("=============================================================")
+}
+
+func tabel(){
+    print("========================================")
+    print("No.|             Nama Suhu              |")
+    print("========================================")
+    print("1  .| Derajat Celcius    -> Fahrenheit  |")
+    print("2  .| Derajat Fahrenheit -> Celcius     |")
+    print("3  .| Derajat Reamur     -> Fahrenheit  |")
+    print("4  .| Derajat Fahrenheit -> Reamur      |")
+    print("5  .| Derajat Reamur     -> Celcius     |")
+    print("6  .| Derajat Celcius    -> Reamur      |")
+    print("7  .| Derajat Kelvin     -> Celcius     |")
+    print("8  .| Derajat Celcius    -> Kelvin      |")
+    print("9  .| Derajat Kelvin     -> Fahrenheit  |")
+    print("10 .| Derajat Fahrenheit -> Kelvin      |")
+    print("11 .| Derajat Kelvin     -> Reamur      |")
+    print("12 .| Derajat Reamur     -> Kelvin      |")
+    print("========================================")
+
+}
+
+
+func main(){
+    var c = Float(0)
+    var r = Float(0)
+    var f = Float(0)
+    var k = Float(0)
+    var j = " "
+    var pil : Int = 0
+
+
+repeat{
+
+    print("Masukkan pilihan anda sesuai dengan yang tabel : ")
+   if let pilStr = readLine(), let pilInt = Int(pilStr){
+pil = pilInt
+  switch pil {
+    case 1 :
+        print("-------- 1.) Anda memilih Celcius -> Fahrenheit -------- ")
+        print("Masukkan suhu celcius yang diketahui : ")
+        c = Float(readLine()!) ?? 0
+        f = ( 9.0 / 5.0 * c ) + 32
+        print ( " Rumusnya yaitu : 9/5 * °C + (32) = 9/5 *  \(c)  + (32) = \(f) ")
+        print(" Hasilnya adalah = \(f) derajat Fahrenheit")
+        print(" \n ")
+
+         case 2 :
+        print("--------2.) Anda memilih Fahrenheit  -> Celcius-------- ")
+        print("Masukkan suhu fahrenheit yang diketahui : ")
+        f = Float(readLine()!) ?? 0
+        c = 5.0 / 9.0 * (f - (32))
+        print ( " Rumusnya yaitu : 5/9 * °F - (32) = 5/9 * \(c)  - (32) =   \(c)")
+        print(" Hasilnya adalah = \(c) derajat celcius")
+        print(" \n ")
+
+
+          case 3 :
+        print("--------3.) Anda memilih Reamur -> Fahrenheit-------- ")
+        print("Masukkan suhu reamur yang diketahui : ")
+        r = Float(readLine()!) ?? 0
+        f = (9.0 / 4.0 * r) + (32)
+        print ( "Rumusnya yaitu : 9/4 * °R + (32) = 9/4 *  \(r) + (32) =  \(f)")
+        print(" Hasilnya adalah = \(f) derajat fahrenheit")
+        print(" \n ")
+
+
+              case 4 :
+        print("---------4.) Anda memilih Fahrenheit -> Reamur-------- ")
+        print("Masukkan suhu fahrenheit yang diketahui : ")
+        f = Float(readLine()!) ?? 0
+        r = 4.0 / 9.0 * (f - 32)
+        print ( "Rumusnya yaitu : (4/9) * (°R -32) = (4/9) * (  \(f)  - 32) = \(r)")
+        print(" Hasilnya adalah = \(r) derajat reamur")
+        print(" \n ")
+
+
+        
+              case 5 :
+        print("--------- 5 .) Anda memilih Reamur -> Celcius-------- ")
+        print("Masukkan suhu reamur yang diketahui : ")
+        r = Float(readLine()!) ?? 0
+        c = 5.0 / 4.0 * r
+        print ( "Rumusnya yaitu : 5/4 * °R = 5/4 * \(r) =   \(c)")
+        print(" Hasilnya adalah = \(c) derajat celcius")
+        print(" \n ")
+
+
+
+            case 6 :
+        print("----------6 .) Anda memilih Celcius -> Reamur-------- ")
+        print("Masukkan suhu celcius yang diketahui : ")
+        c = Float(readLine()!) ?? 0
+        r =   4.0 / 5.0 * c
+        print ( "Rumusnya yaitu : 4/5 * °R = 4/5 * \(c) = \(r)")
+        print(" Hasilnya adalah = \(r) derajat reamur")
+        print(" \n ")
+
+
+
+            case 7 :
+        print("----------7 .) Anda memilih Kelvin -> Celcius-------- ")
+        print("Masukkan suhu celcius yang diketahui : ")
+        k = Float(readLine()!) ?? 0
+        c = 273 - k
+        print ( "Rumusnya yaitu : 273 - k = 273 - \(k) = \(c)")
+        print(" Hasilnya adalah = \(c) derajat celcius")
+        print(" \n ")
+
+
+
+          case 8 :
+        print("----------8 .) Anda memilih Celcius -> Kelvin-------- ")
+        print("Masukkan suhu celcius yang diketahui : ")
+        c = Float(readLine()!) ?? 0
+        k = 273 + c
+        print ( "Rumusnya yaitu : 273 +  °K = 273 + \( c)  =  \( k)")
+        print(" Hasilnya adalah = \(k) derajat kelvin")
+        print(" \n ")
+
+
+
+
+              case 9 :
+        print("---------- 9 .) Anda memilih Kelvin -> Fahrenheit-------- ")
+        print("Masukkan suhu kelvin yang diketahui : ")
+        c = Float(readLine()!) ?? 0
+        f = 9.0 / 5.0 * (c - 273) + 32
+        print ( "Rumusnya yaitu : 273 +  °K = 273 + \( c)  =  \( f)")
+        print(" Hasilnya adalah = \(f) derajat fahrenheit")
+        print(" \n ")
+
+
+
+    
+              case 10 :
+        print("---------- 10 .) Anda memilih Fahrenheit -> Kelvin-------- ")
+        print("Masukkan suhu fahrenheit yang diketahui : ")
+        f = Float(readLine()!) ?? 0
+        k = 5.0 / 9.0 * (f - 32) + 273
+        print ( "Rumusnya yaitu : 5/9 * (°F - 32) + 273 = 5/9 * ( \(f) - 32 + 273 = \(k)")
+        print(" Hasilnya adalah = \(k) derajat kelvin")
+        print(" \n ")
+
+
+            case 11 :
+        print("---------- -11 .) Anda memilih Kelvin -> Reamur-------- ")
+        print("Masukkan suhu fahrenheit yang diketahui : ")
+        k = Float(readLine()!) ?? 0
+        r = 4.0 / 5.0 * (k - 273)
+        print ( "Rumusnya yaitu : (4/5 * °K) - 273 = (4/5 * \(k) ) - 273 = \( r)")
+        print(" Hasilnya adalah = \(k) derajat kelvin")
+        print(" \n ")
+
+
+
+             case 12 :
+        print("----------12 .) Anda memilih Reamur -> Kelvin-------- ")
+        print("Masukkan suhu reamur yang diketahui : ")
+        r = Float(readLine()!) ?? 0
+        k = (5.0 / 4.0 * r) + 273
+        print ( " Rumusnya yaitu : (5/4 * °R) + 273 = (5/4 *  \(r) ) + 273 = \(k)")
+        print(" Hasilnya adalah = \(k) derajat kelvin")
+        print(" \n ")
+
+        default :
+        print("pilihan tidak valid")
+   }
+
+}
+  print("ingin coba programlagi ? [Y/N] : ")
+  j = readLine() ?? " "
+}while j.lowercased() == "y"
+   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+   print("terima kasih telah menggunakan program ini")
+   print("made by Ikkoc_awinata")
+}
+
+
+welcome()
+tabel()
+main()
