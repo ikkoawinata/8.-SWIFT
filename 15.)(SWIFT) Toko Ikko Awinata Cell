@@ -1,0 +1,168 @@
+func welcome(){
+       
+    print("==================================================================================================")
+    print("                     S E L A M A T   D A T A N G   D I  P R O G R A M ")
+    print("                    T O K O    I K K O   A W I N A T A   C E L L ")
+    print("                                    BAHASA SWIFT")   
+    print("==================================================================================================")
+}
+
+func tabel(){
+    
+    print("==================================================================================================")
+    print("No.||\t\t Nama Jasa\t\t\t ||\t\t  Harga Satuan\t\t\t|| ")
+    print("==================================================================================================")
+    print("1. ||\t Edit Background Foto\t\t\t || Rp.\t\t\t\t\t  10.000||")
+    print("2. ||\t System.out.println hitam putih\t\t || Rp.\t\t\t\t\t   1.000||")
+    print("3. ||\t System.out.println Warna fulll\t\t || Rp. \t\t\t\t   2.500||")
+    print("4. ||\t cetak foto 4x6 (1 foto get 5 pcs\t || Rp.\t\t\t\t\t   7.000||")
+    print("5. ||\t cetak foto 3x4 (1 foto get 6 pcs\t || Rp.\t\t\t\t\t   7.000||")
+    print("6. ||\t cetak foto 2x3 (1 foto get 6 pcs\t || Rp.\t\t\t\t\t   7.000||")
+    print("7. ||\t Pengetikan / lembar           \t\t || Rp.\t\t\t\t\t   5.000||")
+    print("8. ||\t Laminating / lembar            \t || Rp.\t\t\t\t\t   5.000||")
+    print("9. ||\t Pulsa hp     \t\t\t\t || Rp.\t\t\t\t          +3.000||")
+    print("10.||\t token listrik  \t\t\t || Rp.\t\t\t\t          +3.000||")
+    print("==================================================================================================")
+    print("\t\t\t\t\t Made by Ikko Awinata \t\t\t\t\t ")
+    print("==================================================================================================")
+}
+
+
+func main(){
+    var hasil1: Float = 0
+    var hasil2: Float = 0
+    var hasil3: Float = 0
+    var hasil4: Float = 0
+    var hasil5: Float = 0
+    var hasil6: Float = 0
+    var hasil7: Float = 0
+    var hasil8: Float = 0
+    var hasil9: Float = 0
+    var hasil10: Float = 0
+    var j = " "
+    var total: Float = 0
+    var n: Float = 0
+    var pilihan: Int = 0
+
+
+
+
+
+repeat{
+    print("Silahkan anda mau apa ? [1/2/3/4/5/6/7/8/9] : ")
+    if let pilihanStr = readLine(), let pilihanInt = Int(pilihanStr){
+        pilihan = pilihanInt
+    switch pilihan {
+        case 1:
+        print("----- 1.) ANDA MEMILIH EDIT BACKGROUND FOTO -----")
+        print("anda mau edit berapa foto ? ")
+        n = Float(readLine()!) ?? 0
+        hasil1 = n * 1000
+        print("total harganya adalah = \(hasil1)")
+        print("\n")
+
+
+         case 2:
+        print("----- 2.) ANDA MEMILIH PRINT HITAM PUTIH -----")
+         print("Anda mau print berapa lembar ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil2 = n * 1000
+        print("total harganya adalah = \(hasil2)")
+        print("\n")
+
+
+           case 3:
+        print("----- 3.) ANDA MEMILIH PRINT FULL COLOR -----")
+                 print("Anda mau print berapa lembar ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil3 = n * 2500
+        print("total harganya adalah = \(hasil3)")
+        print("\n")
+
+
+           case 4:
+        print("----- 4.) ANDA MEMILIH CETAK FOTO 4X6 (1 foto get 5 pcs) -----")
+        print("Silahkan kirim fotonya ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil4 = n * 7000
+        print("total harganya adalah = \(hasil4)")
+        print("\n")
+
+
+          case 5:
+        print("----- 5.) ANDA MEMILIH CETAK FOTO 3X4 (1 foto get 6 pcs) -----")
+        print("Silahkan kirim fotonya ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil5 = n * 7000
+        print("total harganya adalah = \(hasil5)")
+        print("\n")
+
+
+         case 6:
+        print("----- 6.) ANDA MEMILIH CETAK FOTO 2X3 (1 foto get 6 pcs) -----")
+        print("Silahkan kirim fotonya ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil6 = n * 7000
+        print("total harganya adalah = \(hasil6)")
+        print("\n")
+
+
+         case 7:
+        print("----- 7.) ANDA MEMILIH PENGETIKAN -----")
+        print("berapa halaman yang mau diketik ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil7 = n * 5000
+        print("total harganya adalah = \(hasil7)")
+        print("\n")
+
+
+         case 8:
+        print("----- 8.) ANDA MEMILIH LAMINATING -----")
+        print("Berapa lembar yang mau dilaminating ? [*masukkan angka] : ")
+        n = Float(readLine()!) ?? 0
+        hasil8 = n * 5000
+        print("total harganya adalah = \(hasil8)")
+        print("\n")
+
+
+         case 9:
+        print("----- 9.) ANDA MEMILIH BELI PULSA -----")
+        print("Mau beli pulsa berapa ? [ex = 5000] : ")
+        n = Float(readLine()!) ?? 0
+        hasil9 = n * 5000
+        print("total harganya adalah = \(hasil9)")
+        print("\n")
+
+
+           case 10:
+        print("-----10.) ANDA MEMILIH TOKEN LISTRIK -----")
+        print("Mau beli TOKEN berapa ? [ex = 5000] : ")
+        n = Float(readLine()!) ?? 0
+        hasil10 = n * 5000
+        print("total harganya adalah = \(hasil10)")
+        print("\n")
+
+
+        default:
+        print("pilihan tidak valid")
+    }
+ total = hasil1 + hasil2 + hasil3 + hasil4 + hasil5 + hasil6 + hasil7 + hasil8 + hasil9 + hasil10
+print("ingin coba program ini lagi ? [Y/N] : ")
+ j = readLine() ?? " "
+}
+print("total keseluruhan yang anda harus bayar adalah = \(total)")
+}
+while j.lowercased() == "y"
+print("terima kasih telah menggunakan program ini")
+print("made by ikkoc_awinata")
+}
+
+
+
+
+
+
+
+welcome()
+tabel()
+main()
