@@ -1,0 +1,41 @@
+func welcome(){
+    print("========================================================")
+    print(" S E L A M A T   D  A T A N G   D I   P R O G R A M")
+    print("          P E M B A G I A N  +  N O T E")
+    print("                 BAHASA SWIFT")
+    print("========================================================")
+}
+
+func main(){
+    var a = Float(0)
+    var b = Float(0)
+    var hasil = Float(0)
+    var j = " "
+
+
+
+repeat{
+    print("Masukkan bilangan yang akan dibagi : ")
+    a = Float(readLine()!) ?? 0
+    print("Masukkan bilangan pembagi : ")
+    b = Float(readLine()!) ?? 0
+
+
+    if( b == 0){
+        print("tidak dapat dibagi dengan angka nol, maka hasilnya akan tetap ")
+    }else {
+        hasil  = a / b
+        print("hasil dari pembagian \(a) / \(b) = \(hasil)")
+    }
+    print("ingin coba program lagi ? [Y/N] : ")
+    j = readLine() ?? " "
+
+}while j.lowercased() == "y"
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("terima kasih telah menggunakan program ini")
+print("made by Ikkoc_awinata")
+}
+
+
+welcome()
+main()
