@@ -1,0 +1,60 @@
+func welcome(){
+    print("=============================================================")
+    print("    S E L A M A T   D A T A N G   D I   P R O G R A M")
+    print("             PEMBUATAN AKUN DAN PASSWORD")
+    print("                     BAHASA SWIFT")
+    print("=============================================================")
+}
+
+
+func main(){
+    welcome()
+
+    var i: Int = 0
+    var user = " "
+    var pass = " "
+    var x = " "
+    var y = " "
+    var j = " "
+
+
+
+repeat {
+    print("SILAHKAN BUAT AKUN DULU YAAHHH.....")
+    print(" USERNAME : ")
+    user = readLine() ?? " "
+    print(" PASSWORD : ")
+    pass = readLine() ?? " "
+    print("AKUN SUDAH DIBUAT, SILAHKAN LOGIN UNTUK MASUK")
+
+
+    while( i <= 2){
+        print("Masukkan USERNAME : ")
+        x = readLine() ?? " "
+        print("Masukkan PASSWORD : ")
+        y = readLine() ?? " "
+    
+
+        if ( x == user && y == pass){
+            print("YEYYY ANDA BERHASIL MASUK")
+            print("ingin coba program lagi ? [Y/N] : ")
+            j = readLine() ?? " "
+            if j.lowercased() == "y"{
+                break
+            }
+        }else {
+            print("Username atau Password Salah")
+            i+=1
+        }
+}
+if i > 2{
+print("MAAF AKUN ANDA KAMI BLOKIR ")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n")
+}
+}while j.lowercased() == "y"
+print("terima kasih telah menggunakan program ini")
+print("made by ikkoc_awinata")
+}
+
+
+main()
