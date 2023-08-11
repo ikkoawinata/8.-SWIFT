@@ -1,0 +1,24 @@
+func welcome() {
+    print("=================================================")
+    print("        SELAMAT DATANG DI PROGRAM")
+    print("            PERKALIAN 1-10")
+    print("               BAHASA SWIFT")
+    print("=================================================")
+}
+
+func main() {
+    var i = 0
+    var j = 0
+    var row = 0
+
+    for i in 1...10 {
+        var rowString = ""
+        for j in 1...10 {
+            rowString += "\(i * j) | "
+        }
+        print("\n \(rowString)")
+    }
+}
+
+welcome()
+main()
