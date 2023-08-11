@@ -1,0 +1,466 @@
+func welcome(){
+    print("==========================================================")
+    print("    S E L A M A T   D A T A N G   D I   P R O G R A M")
+    print("    C O N V E R T  S A T U A N   P A N J A N G")
+    print("                       BAHASA SWIFT")
+    print("==========================================================")
+}
+
+
+
+func tabel(){
+     print( "================================================================================")
+    print( "NO |                 SATUAN PANJANG               ")
+    print( "================================================================================")
+    print( "1.  | KM (Kilometer)       ->   HM (Hektometer)                                 |")
+    print( "2.  | KM (Kilometer)       ->   DAM (Dekameter)                                 |")
+    print( "3.  | KM (Kilometer)       ->   M (Meter)                                       |")
+    print( "4.  | KM (Kilometer)       ->   DM (Desimeter)                                  |")
+    print( "5.  | KM (Kilometer)       ->   CM (Centimeter)                                 |")
+    print( "6.  | KM (Kilometer)       ->   MM (Milimeter)                                  |")
+    print( "7.  | HM (Hektometer)      ->   KM (Kilometer)                                  |")
+    print( "8.  | HM (Hektometer)      ->   DAM (Dekameter)                                 |")
+    print( "9.  | HM (Hektometer)      ->   M (Meter)                                       |")
+    print( "10. | HM (Hektometer)      ->   DM (Desimeter)                                  |")
+    print( "11. | HM (Hektometer)      ->   CM (Centimeter)                                 |")
+    print( "12. | HM (Hektometer)      ->   MM (Milimeter)                                  |")
+    print( "13. | DAM (Dekameter)      ->   KM (Kilometer)                                  |")
+    print( "14. | DAM (Dekameter)      ->   HM (Hektometer)                                 |")
+    print( "15. | DAM (Dekameter)      ->   M (Meter)                                       |")
+    print( "16. | DAM (Dekameter)      ->   DM (Desimeter)                                  |")
+    print( "17. | DAM (Dekameter)      ->   CM (Centimeter)                                 |")
+    print( "18. | DAM (Dekameter)      ->   MM (Milimeter)                                  |")
+    print( "19. | M (Meter)            ->   KM (Kilometer)                                  |")
+    print( "20. | M (Meter)            ->   HM (Hektometer)                                 |")
+    print( "21. | M (Meter)            ->   DAM (Dekameter)                                 |")
+    print( "22. | M (Meter)            ->   DM (Desimeter)                                  |")
+    print( "23. | M (Meter)            ->   CM (Centimeter)                                 |")
+    print( "24. | M (Meter)            ->   MM (Milieter)                                   |")
+    print( "25. | DM (Desimeter)       ->   KM (Kilometer)                                  |")
+    print( "26. | DM (Desimeter)       ->   HM (Hektometer)                                 |")
+    print( "27. | DM (Desimeter)       ->   DAM (Dekameter)                                 |")
+    print( "28. | DM (Desimeter)       ->   M (Meter)                                       |")
+    print( "29. | DM (Desimeter)       ->   CM (Centimeter)                                 |")
+    print( "30. | DM (Desimeter)       ->   MM (Milimeter)                                  |")
+    print( "31. | CM (Centimeter)      ->   KM (Kilometer)                                  |")
+    print( "32. | CM (Centimeter)      ->   HM (Hektometer)                                 |")
+    print( "33. | CM (Centimeter)      ->   DAM (Dekameter)                                 |")
+    print( "34. | CM (Centimeter)      ->   M (Meter)                                       |")
+    print( "35. | CM (Centimeter)      ->   DM (Desimeter)                                  |")
+    print( "36. | CM (Centimeter)      ->   MM (Milimeter)                                  |")
+    print( "37. | MM (Milimeter)       ->   KM (Kilometer)                                  |")
+    print( "38. | MM (Milimeter)       ->   HM (Hektometer)                                 |")
+    print( "39. | MM (Milimeter)       ->   DAM (Dekameter)                                 |")
+    print( "40. | MM (Milimeter)       ->   M (Meter)                                       |")
+    print( "41. | MM (Milimeter)       ->   DM (Desimeter)                                  |")
+    print( "42. | MM (Milimeter)       ->   CM (Centimeter)                                 |")
+    print( "================================================================================")
+}
+
+func main(){
+    var n: Int = 0
+    var pil: Int = 0
+    var rumus: Int = 0
+    var j = " "
+
+
+repeat{
+    print("Silahkan pilih sesuai dengan tabel : ")
+    if let pilStr=readLine(), let pilInt = Int(pilStr){
+        pil = pilInt
+    }
+    print(" \n ")
+
+    switch pil{
+        case 1:
+        print ("------ 1.) KM -> HM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) HM")
+
+
+
+        case 2:
+        print ("------ 2.) KM -> DAM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) DAM")
+
+
+          case 3:
+        print ("------3.) KM -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) M")
+
+
+
+          case 4:
+        print ("------ 4.) KM -> DM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 1000 = \(rumus) DM")
+
+
+          case 5:
+        print ("------ 5.) KM -> CM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100000 
+        print(" \(n) * 1000 = \(rumus) CM")
+
+
+
+          case 6:
+        print ("------ 6.) KM -> MM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000000 
+        print(" \(n) * 1000 = \(rumus) MM")
+
+
+
+            case 7:
+        print ("------ 7.) HM -> KM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) MM")
+
+
+
+           case 8:
+        print ("------ 8.) HM -> DAM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) DAM")
+
+
+
+           case 9:
+        print ("------ 9.) HM -> M  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) M")
+
+
+
+            case 10:
+        print ("------ 10.) HM -> DM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) DM")
+
+
+
+           case 11:
+        print ("------ 11.) HM -> CM-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 10000 = \(rumus) CM")
+
+
+
+            case 12:
+        print ("------12.) HM -> MM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100000 
+        print(" \(n) * 100000 = \(rumus) MM")
+
+
+
+           case 13:
+        print ("------ 13.) DAM -> KM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) KM")
+
+
+
+         case 14:
+        print ("------ 14.) DAM -> HM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) HM")
+
+
+
+            case 15:
+        print ("------  15.) DAM -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) M")
+
+
+
+          case 16:
+        print ("------ 16.) DAM -> DM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) DM")
+
+
+
+            case 17:
+        print ("------ 17.) DAM -> CM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) CM")
+
+
+
+
+          case 18:
+        print ("------ 18.) DAM -> MM   -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 10000 = \(rumus) MM")
+
+
+
+            case 19:
+        print ("------ 19.) M -> KM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) / 1000 = \(rumus) KM")
+
+
+
+           case 20:
+        print ("------ 20.) M -> HM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) HM")
+
+
+
+           case 21:
+        print ("------ 21.) M -> DAM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) DAM")
+
+
+
+          case 22:
+        print ("------ 22.) M -> DM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) DM")
+
+
+
+         case 23:
+        print ("------ 23.) M -> CM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) CM")
+
+
+
+        
+         case 24:
+        print ("------ 24.) M -> MM-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) MM")
+
+
+          
+         case 25:
+        print ("------25.) DM -> KM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 10000 = \(rumus) KM")
+
+
+
+         case 26:
+        print ("------ 26.) DM -> HM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) * 1000 = \(rumus) HM")
+
+
+
+          case 27:
+        print ("------ 27.) DM -> DAM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) * 100 = \(rumus) DAM")
+
+
+
+          case 28:
+        print ("------ 28.) DM -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) * 10 = \(rumus) M")
+
+
+
+          case 29:
+        print ("------ 29.) DM -> CM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) CM")
+
+
+
+            case 30:
+        print ("------ 30.) DM -> MM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) MM")
+
+
+
+          case 31:
+        print ("------ 31.) CM -> KM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100000 
+        print(" \(n) / 100000 = \(rumus) KM")
+
+
+
+           case 32:
+        print ("------ 32.) CM -> HM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10000 
+        print(" \(n) / 10000 = \(rumus) HM")
+
+
+
+           case 33:
+        print ("------33.) CM -> DAM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) / 1000 = \(rumus) DAM")
+
+
+
+          case 34:
+        print ("------ 34.) CM -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) M")
+
+
+
+           case 35:
+        print ("------ 35.) CM -> DM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) DM")
+
+
+
+            case 36:
+        print ("------ 36.) CM -> MM  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) MM")
+
+
+
+            case 37:
+        print ("------ 37.) MM -> KM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000000 
+        print(" \(n) / 1000000 = \(rumus) KM")
+
+
+
+          case 38:
+        print ("------ 38.) MM -> HM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100000 
+        print(" \(n) / 100000 = \(rumus) HM")
+
+
+
+          case 39:
+        print ("------ 39.) MM -> DAM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10000 
+        print(" \(n) / 10000 = \(rumus) DAM")
+
+
+
+          case 40:
+        print ("------ 40.) MM -> M-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) / 1000 = \(rumus) M")
+
+
+           case 41:
+        print ("------ 41.) MM -> DM-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) DM")
+
+
+
+          case 42:
+        print ("------ 42.) MM -> CM -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) CM")
+
+
+
+        default:
+        print("pilihan tidak valid")
+    }
+    print("ingin coba program ini lagi ? [Y/N] : ")
+    j = readLine() ?? " "
+}
+while j.lowercased() == "y"
+print("==========================================================")
+print("terima kasih telah menggnakan program ini")
+print("made by ikkoc_awinata")
+}
+
+welcome()
+tabel()
+main()
