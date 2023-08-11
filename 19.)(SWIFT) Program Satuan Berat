@@ -1,0 +1,466 @@
+func welcome(){
+    print("==========================================================")
+    print("    S E L A M A T   D A T A N G   D I   P R O G R A M")
+    print("      C O N V E R T  S A T U A N   B E R A T ")
+    print("                       BAHASA SWIFT")
+    print("==========================================================")
+}
+
+
+
+func tabel(){
+     print( "================================================================================")
+    print( "NO |                 SATUAN BERAT               ")
+    print( "================================================================================")
+    print( "1.  | KG (Kilogram)       ->   HG (Hektogram)                                 |")
+    print( "2.  | KG (Kilogram)       ->   DAG (Dekagram)                                 |")
+    print( "3.  | KG (Kilogram)       ->   G (gram)                                       |")
+    print( "4.  | KG (Kilogram)       ->   DG (Desigram)                                  |")
+    print( "5.  | KG (Kilogram)       ->   CG (Centigram)                                 |")
+    print( "6.  | KG (Kilogram)       ->   MG (Miligram)                                  |")
+    print( "7.  | HG (Hektogram)      ->   KG (Kilogram)                                  |")
+    print( "8.  | HG (Hektogram)      ->   DAG (Dekagram)                                 |")
+    print( "9.  | HG (Hektogram)      ->   G (gram)                                       |")
+    print( "10. | HG (Hektogram)      ->   DG (Desigram)                                  |")
+    print( "11. | HG (Hektogram)      ->   CG (Centigram)                                 |")
+    print( "12. | HG (Hektogram)      ->   MG (Miligram)                                  |")
+    print( "13. | DAG (Dekagram)      ->   KG (Kilogram)                                  |")
+    print( "14. | DAG (Dekagram)      ->   HG (Hektogram)                                 |")
+    print( "15. | DAG (Dekagram)      ->   G (gram)                                       |")
+    print( "16. | DAG (Dekagram)      ->   DG (Desigram)                                  |")
+    print( "17. | DAG (Dekagram)      ->   CG (Centigram)                                 |")
+    print( "18. | DAG (Dekagram)      ->   MG (Miligram)                                  |")
+    print( "19. | G (gram)            ->   KG (Kilogram)                                  |")
+    print( "20. | G (gram)            ->   HG (Hektogram)                                 |")
+    print( "21. | G (gram)            ->   DAG (Dekagram)                                 |")
+    print( "22. | G (gram)            ->   DG (Desigram)                                  |")
+    print( "23. | G (gram)            ->   CG (Centigram)                                 |")
+    print( "24. | G (gram)            ->   MG (Milieter)                                   |")
+    print( "25. | DG (Desigram)       ->   KG (Kilogram)                                  |")
+    print( "26. | DG (Desigram)       ->   HG (Hektogram)                                 |")
+    print( "27. | DG (Desigram)       ->   DAG (Dekagram)                                 |")
+    print( "28. | DG (Desigram)       ->   G (gram)                                       |")
+    print( "29. | DG (Desigram)       ->   CG (Centigram)                                 |")
+    print( "30. | DG (Desigram)       ->   MG (Miligram)                                  |")
+    print( "31. | CG (Centigram)      ->   KG (Kilogram)                                  |")
+    print( "32. | CG (Centigram)      ->   HG (Hektogram)                                 |")
+    print( "33. | CG (Centigram)      ->   DAG (Dekagram)                                 |")
+    print( "34. | CG (Centigram)      ->   G (gram)                                       |")
+    print( "35. | CG (Centigram)      ->   DG (Desigram)                                  |")
+    print( "36. | CG (Centigram)      ->   MG (Miligram)                                  |")
+    print( "37. | MG (Miligram)       ->   KG (Kilogram)                                  |")
+    print( "38. | MG (Miligram)       ->   HG (Hektogram)                                 |")
+    print( "39. | MG (Miligram)       ->   DAG (Dekagram)                                 |")
+    print( "40. | MG (Miligram)       ->   G (gram)                                       |")
+    print( "41. | MG (Miligram)       ->   DG (Desigram)                                  |")
+    print( "42. | MG (Miligram)       ->   CG (Centigram)                                 |")
+    print( "================================================================================")
+}
+
+func main(){
+    var n: Int = 0
+    var pil: Int = 0
+    var rumus: Int = 0
+    var j = " "
+
+
+repeat{
+    print("Silahkan pilih sesuai dengan tabel : ")
+    if let pilStr=readLine(), let pilInt = Int(pilStr){
+        pil = pilInt
+    }
+    print(" \n ")
+
+    switch pil{
+        case 1:
+        print ("------ 1.) KG -> HG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) HG")
+
+
+
+        case 2:
+        print ("------ 2.) KG -> DAG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) DAG")
+
+
+          case 3:
+        print ("------3.) KG -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) M")
+
+
+
+          case 4:
+        print ("------ 4.) KG -> DG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 1000 = \(rumus) DG")
+
+
+          case 5:
+        print ("------ 5.) KG -> CG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100000 
+        print(" \(n) * 1000 = \(rumus) CG")
+
+
+
+          case 6:
+        print ("------ 6.) KG -> MG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000000 
+        print(" \(n) * 1000 = \(rumus) MG")
+
+
+
+            case 7:
+        print ("------ 7.) HG -> KG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) MG")
+
+
+
+           case 8:
+        print ("------ 8.) HG -> DAG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) DAG")
+
+
+
+           case 9:
+        print ("------ 9.) HG -> M  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) M")
+
+
+
+            case 10:
+        print ("------ 10.) HG -> DG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) DG")
+
+
+
+           case 11:
+        print ("------ 11.) HG -> CG-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 10000 = \(rumus) CG")
+
+
+
+            case 12:
+        print ("------12.) HG -> MG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100000 
+        print(" \(n) * 100000 = \(rumus) MG")
+
+
+
+           case 13:
+        print ("------ 13.) DAG -> KG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) KG")
+
+
+
+         case 14:
+        print ("------ 14.) DAG -> HG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) HG")
+
+
+
+            case 15:
+        print ("------  15.) DAG -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) M")
+
+
+
+          case 16:
+        print ("------ 16.) DAG -> DG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) DG")
+
+
+
+            case 17:
+        print ("------ 17.) DAG -> CG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) CG")
+
+
+
+
+          case 18:
+        print ("------ 18.) DAG -> MG   -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 10000 = \(rumus) MG")
+
+
+
+            case 19:
+        print ("------ 19.) M -> KG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) / 1000 = \(rumus) KG")
+
+
+
+           case 20:
+        print ("------ 20.) M -> HG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) HG")
+
+
+
+           case 21:
+        print ("------ 21.) M -> DAG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) DAG")
+
+
+
+          case 22:
+        print ("------ 22.) M -> DG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) DG")
+
+
+
+         case 23:
+        print ("------ 23.) M -> CG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) CG")
+
+
+
+        
+         case 24:
+        print ("------ 24.) M -> MG-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 1000 
+        print(" \(n) * 1000 = \(rumus) MG")
+
+
+          
+         case 25:
+        print ("------25.) DG -> KG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10000 
+        print(" \(n) * 10000 = \(rumus) KG")
+
+
+
+         case 26:
+        print ("------ 26.) DG -> HG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) * 1000 = \(rumus) HG")
+
+
+
+          case 27:
+        print ("------ 27.) DG -> DAG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) * 100 = \(rumus) DAG")
+
+
+
+          case 28:
+        print ("------ 28.) DG -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) * 10 = \(rumus) M")
+
+
+
+          case 29:
+        print ("------ 29.) DG -> CG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) CG")
+
+
+
+            case 30:
+        print ("------ 30.) DG -> MG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 100 
+        print(" \(n) * 100 = \(rumus) MG")
+
+
+
+          case 31:
+        print ("------ 31.) CG -> KG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100000 
+        print(" \(n) / 100000 = \(rumus) KG")
+
+
+
+           case 32:
+        print ("------ 32.) CG -> HG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10000 
+        print(" \(n) / 10000 = \(rumus) HG")
+
+
+
+           case 33:
+        print ("------33.) CG -> DAG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) / 1000 = \(rumus) DAG")
+
+
+
+          case 34:
+        print ("------ 34.) CG -> M -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) M")
+
+
+
+           case 35:
+        print ("------ 35.) CG -> DG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) DG")
+
+
+
+            case 36:
+        print ("------ 36.) CG -> MG  -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) MG")
+
+
+
+            case 37:
+        print ("------ 37.) MG -> KG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000000 
+        print(" \(n) / 1000000 = \(rumus) KG")
+
+
+
+          case 38:
+        print ("------ 38.) MG -> HG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100000 
+        print(" \(n) / 100000 = \(rumus) HG")
+
+
+
+          case 39:
+        print ("------ 39.) MG -> DAG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10000 
+        print(" \(n) / 10000 = \(rumus) DAG")
+
+
+
+          case 40:
+        print ("------ 40.) MG -> M-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 1000 
+        print(" \(n) / 1000 = \(rumus) M")
+
+
+           case 41:
+        print ("------ 41.) MG -> DG-------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 100 
+        print(" \(n) / 100 = \(rumus) DG")
+
+
+
+          case 42:
+        print ("------ 42.) MG -> CG -------- ")
+        print("Masukkan angka = ")
+        n = Int(readLine()!) ?? 0
+        rumus = n / 10 
+        print(" \(n) / 10 = \(rumus) CG")
+
+
+
+        default:
+        print("pilihan tidak valid")
+    }
+    print("ingin coba program ini lagi ? [Y/N] : ")
+    j = readLine() ?? " "
+}
+while j.lowercased() == "y"
+print("==========================================================")
+print("terima kasih telah menggnakan program ini")
+print("made by ikkoc_awinata")
+}
+
+welcome()
+tabel()
+main()
