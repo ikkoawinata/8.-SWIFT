@@ -1,0 +1,46 @@
+func welcome(){
+    print("==============================================================")
+    print("     S E L A M A T   D A T A N G   D I   P R O G R A M")
+    print("                       DAYLIGHT TREND")
+    print("                       BAHASA SWIFT")
+    print("==============================================================")
+}
+
+
+func main(){
+    var x: Int = 0
+    print(" ")
+    if let input = readLine(){
+    print("and i can still see it all")
+    print("\n")
+        if let input = readLine(){
+    for i in 1...20{
+        print(" A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A ")
+    }
+       print(" ")
+         if let input = readLine(){
+        print("all of you, all of me")
+        print("\n")
+            if let input = readLine(){
+    for i in 1...20{
+        print(" A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A ")
+    }
+
+        print(" ")
+         if let input = readLine(){
+        print("i once believed love would be")
+        print("\n")
+            if let input = readLine(){
+    for i in 1...20{
+        print(" A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A ")
+    }
+    }
+}
+}
+}
+        }
+    }
+}
+
+welcome()
+main()
