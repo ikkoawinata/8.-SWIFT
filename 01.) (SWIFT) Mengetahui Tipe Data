@@ -1,33 +1,44 @@
-//BAHASA SWIFT INI SYNTAXNYA MIRIP DENGAN BAHASA PYTHON 
+import Foundation
 
-
-
-func welcome() {
-    print("=============================================================")
-    print("               SELAMAT DATANG DI PROGRAM")
-    print("                MENGETAHUI TIPE DATA")
-    print("               B A H A S A    S W I F T")
-    print("=============================================================")
+func judul() {
+    print("=====================================================")
+    print("              SELAMAT DATANG DI PROGRAM              ")
+    print("                MENGETAHUI TIPE DATA                 ")
+    print("=====================================================")
 }
 
-// Ini adalah fungsi void yang berisi tipe data
-func coba() {
-    let x = "Hello World"
-    let y: Character = "F"
-    let num = 12
-    let float = 12.67
-    let bool = true
-    let bool1 = false
-    let array = [3, 2, 4, 5]
+func main() {
+    judul()
 
-    // Ini fungsi untuk mencetak atau print
-    print("ini adalah tipe data String =",x)
-    print("ini adalah tipe data char =",y)
-    print("ini adalah tipe data integer =",num)
-    print("ini adalah tipe data Boolean (Benar/True) ="bool)
-    print("ini adalah tipe data Boolean (Salah/False) =",bool1)
-    print("ini adalah tipe data array =",array)
+    print("1.) TIPE DATA INTEGER")
+    let dataInteger: Int = 0
+    print("Data     : \(dataInteger)")
+    print("Bertipe  : \(type(of: dataInteger))\n")
+
+    print("2.) TIPE DATA FLOAT")
+    let dataFloat: Double = 6.08
+    print("Data     : \(dataFloat)")
+    print("Bertipe  : \(type(of: dataFloat))\n")
+
+    print("3.) TIPE DATA STRING")
+    let dataString: String = "Ikko Cahya Awinata"
+    print("Data     : \(dataString)")
+    print("Bertipe  : \(type(of: dataString))\n")
+
+    print("4.) TIPE DATA BOOLEAN")
+    let dataBool: Bool = true
+    print("Data     : \(dataBool)")
+    print("Bertipe  : \(type(of: dataBool))\n")
+
+    print("5.) TIPE DATA CHAR")
+    let dataChar: Character = "F"
+    print("Data     : \(dataChar)")
+    print("Bertipe  : \(type(of: dataChar))\n")
+
+    print("6.) TIPE DATA ARRAY")
+    let dataArray: [Int] = [1, 2, 3, 4, 5]
+    print("Data     : \(dataArray)")
+    print("Bertipe  : \(type(of: dataArray))\n")
 }
 
-welcome()
-coba()
+main()
