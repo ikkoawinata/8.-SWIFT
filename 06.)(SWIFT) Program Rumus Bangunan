@@ -183,7 +183,7 @@ func main() {
             print("Masukkan panjang diagonal 1: ")
             a = Float(readLine()!) ?? 0
             print("Masukkan panjang diagonal 2:")
-            a = Float(readLine()!) ?? 0
+            b = Float(readLine()!) ?? 0
             luas = 0.5 * a * b
             print("Luas Belah Ketupat dengan panjang diagonal 1 \(a) dan diagonal 2 \(b) adalah \(luas)")
         case 15:
