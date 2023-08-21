@@ -129,7 +129,7 @@ repeat{
         print("----- 9.) ANDA MEMILIH BELI PULSA -----")
         print("Mau beli pulsa berapa ? [ex = 5000] : ")
         n = Float(readLine()!) ?? 0
-        hasil9 = n * 5000
+        hasil9 = 1* n + 3000
         print("total harganya adalah = \(hasil9)")
         print("\n")
 
@@ -138,7 +138,7 @@ repeat{
         print("-----10.) ANDA MEMILIH TOKEN LISTRIK -----")
         print("Mau beli TOKEN berapa ? [ex = 5000] : ")
         n = Float(readLine()!) ?? 0
-        hasil10 = n * 5000
+        hasil10 = 1* n + 3000
         print("total harganya adalah = \(hasil10)")
         print("\n")
 
