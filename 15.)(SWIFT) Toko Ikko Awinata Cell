@@ -57,7 +57,7 @@ repeat{
         print("----- 1.) ANDA MEMILIH EDIT BACKGROUND FOTO -----")
         print("anda mau edit berapa foto ? ")
         n = Float(readLine()!) ?? 0
-        hasil1 = n * 1000
+        hasil1 = n * 10000
         print("total harganya adalah = \(hasil1)")
         print("\n")
 
