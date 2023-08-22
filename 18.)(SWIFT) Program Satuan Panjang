@@ -103,7 +103,7 @@ repeat{
         print("Masukkan angka = ")
         n = Int(readLine()!) ?? 0
         rumus = n * 10000 
-        print(" \(n) * 1000 = \(rumus) DM")
+        print(" \(n) * 10000 = \(rumus) DM")
 
 
           case 5:
@@ -111,7 +111,7 @@ repeat{
         print("Masukkan angka = ")
         n = Int(readLine()!) ?? 0
         rumus = n * 100000 
-        print(" \(n) * 1000 = \(rumus) CM")
+        print(" \(n) * 100000 = \(rumus) CM")
 
 
 
@@ -120,7 +120,7 @@ repeat{
         print("Masukkan angka = ")
         n = Int(readLine()!) ?? 0
         rumus = n * 1000000 
-        print(" \(n) * 1000 = \(rumus) MM")
+        print(" \(n) * 1000000 = \(rumus) MM")
 
 
 
