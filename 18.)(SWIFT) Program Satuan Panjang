@@ -328,8 +328,8 @@ repeat{
         print ("------ 29.) DM -> CM -------- ")
         print("Masukkan angka = ")
         n = Int(readLine()!) ?? 0
-        rumus = n / 10 
-        print(" \(n) / 10 = \(rumus) CM")
+        rumus = n * 10 
+        print(" \(n) * 10 = \(rumus) CM")
 
 
 
